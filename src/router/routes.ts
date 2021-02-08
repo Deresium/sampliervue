@@ -5,6 +5,7 @@ import SaActuality from "@/views/SaActuality.vue";
 import SaArticleView from "@/views/SaArticleView.vue";
 import SaInterview from "@/views/SaInterview.vue";
 import SaVideoPodcast from "@/views/SaVideoPodcast.vue";
+import SaArtistView from "@/views/SaArtistView.vue";
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -44,6 +45,14 @@ const routes: Array<RouteRecordRaw> = [
 		path: '/artistes',
 		name: 'Artists',
 		component: SaArtists,
+		meta:{
+			title:'Samplier: Artistes'
+		}
+	},
+	{
+		path: '/artistes/:artistId',
+		name: 'ArtistView',
+		component: SaArtistView,
 		meta:{
 			title:'Samplier: Artistes'
 		}
