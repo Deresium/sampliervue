@@ -31,7 +31,7 @@ export default defineComponent({
         const search = ref('');
 
         const submitForm = async() => {
-            console.log('submit');
+            //console.log('submit');
         }
 
         return{

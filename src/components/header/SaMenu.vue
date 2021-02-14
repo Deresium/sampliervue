@@ -11,6 +11,8 @@
                     <router-link :to="{name: 'Interview'}"><span @click="closeMenu">Interviews</span></router-link>
                     <router-link :to="{name: 'Videopodcast'}"><span @click="closeMenu">Vidéos & Podcasts</span></router-link>
                     <router-link :to="{name: 'Artists'}"><span @click="closeMenu">Artistes</span></router-link>
+                    <router-link :to="{name: 'Release'}"><span @click="closeMenu">Sorties</span></router-link>
+                    <router-link :to="{name: 'Contact'}"><span @click="closeMenu">Contact</span></router-link>
                 </div>
             </div>
         </transition>
@@ -46,6 +48,7 @@ export default defineComponent({
     width: 100vw;
     height: 100vh;
     background-color: #FFDD00;
+    z-index: 10;
 }
 
 .clearDiv{

@@ -16,6 +16,15 @@ axiosServer.interceptors.response.use((response) => {
         await router.push({name: 'Home'})
         return false;
     }
+    else if(error.response.status === 400) {
+        alert(error.response.data);
+        return false;
+    }
+
+    else if(error.response.status === 500) {
+        alert('Une erreur est survenue');
+        return false;
+    }
     else
         return Promise.reject(error);
 })

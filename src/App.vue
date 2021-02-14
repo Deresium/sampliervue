@@ -3,14 +3,37 @@
         <SaHeader/>
         <router-view/>
     </div>
+    <SaFooter/>
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue"
+import {computed, defineComponent} from "vue"
 
 import SaHeader from "@/components/header/SaHeader.vue";
+import SaFooter from "@/components/footer/SaFooter.vue";
+import store from "@/store/store";
+import {useRoute} from "vue-router";
+import {useGetCookie, useIsKey} from "@/utils/coookie";
 export default defineComponent({
-    components: {SaHeader}
+    components: {SaFooter, SaHeader},
+    setup(){
+        const isLoggedIn = computed(() => store.getters['login/isLoggedIn']);
+
+        const getKey = computed(() => {
+            const {fullPath, query: {searchTxt}} = useRoute();
+            return `${fullPath}${searchTxt}${isLoggedIn.value}`;
+        });
+
+        if(useIsKey('payload')){
+            const payload = useGetCookie('payload');
+            const decriptPayload = JSON.parse(atob(payload.split('.')[1]));
+            store.dispatch('login/loginUser', decriptPayload.role)
+        }
+
+        return{
+            getKey
+        }
+    }
 })
 </script>
 <style>
@@ -22,6 +45,12 @@ export default defineComponent({
 @font-face {
     font-family: "Asap Condensed";
     src: url("assets/fonts/AsapCondensed-Regular.ttf") format("truetype");
+}
+
+body{
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100vw;
 }
 
 .app{
@@ -44,7 +73,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .exceptFooter{
-    min-height: 90vh;
+    min-height: 93vh;
+  margin-bottom: 2vh;
+    box-sizing: border-box;
 }
 
 .withMargin > h1{
@@ -60,10 +91,6 @@ h1, h2, h3, h4, h5, h6{
 
     .desktop{
         display: block;
-    }
-
-    .exceptFooter{
-        min-height: 98vh;
     }
 
     .withMargin{

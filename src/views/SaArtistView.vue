@@ -1,13 +1,15 @@
 <template>
-    <h1>{{ artist.artistName }}</h1>
-    <p class="bold">{{artist.artistDescription}}</p>
+    <div class="withMargin">
+        <h1>{{ artist.artistName }}</h1>
+        <p class="bold">{{artist.artistDescription}}</p>
 
-    <div class="component">
-        <component :is="componentName"/>
-    </div>
+        <div class="component">
+            <component :is="componentName"/>
+        </div>
 
-    <div class="btn">
-        <SaButton :to="{name: 'Artists'}">Retour aux artistes</SaButton>
+        <div class="btn">
+            <SaButton :to="{name: 'Artists'}">Retour aux artistes</SaButton>
+        </div>
     </div>
 </template>
 

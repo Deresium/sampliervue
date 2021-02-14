@@ -24,5 +24,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+    div img{
+        width: 100%;
+    }
 </style>

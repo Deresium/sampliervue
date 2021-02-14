@@ -1,14 +1,16 @@
 <template>
-    <h1>{{article.articleTitle}}</h1>
-    <p class="bold">{{article.articleSubtitle}}</p>
+    <div class="withMargin">
+        <h1>{{article.articleTitle}}</h1>
+        <p class="bold">{{article.articleSubtitle}}</p>
 
-    <div class="component">
-        <component :is="componentName"/>
-    </div>
+        <div class="component">
+            <component :is="componentName"/>
+        </div>
 
-    <p>{{article.articleDateString}}</p>
-    <div class="btn">
-        <SaButton :to="{name:to}">{{txtReturn}}</SaButton>
+        <p>{{article.articleDateString}}</p>
+        <div class="btn">
+            <SaButton :to="{name:to}">{{txtReturn}}</SaButton>
+        </div>
     </div>
 </template>
 

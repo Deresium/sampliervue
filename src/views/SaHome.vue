@@ -27,7 +27,7 @@ export default defineComponent({
     display: flex;
     align-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .title h1, .title h2{
@@ -46,6 +46,7 @@ export default defineComponent({
     font-family: "Saira Condensed", serif;
     font-weight: bold;
     font-size: 80px;
+    margin-top: 0;
 }
 
 .buttons{
@@ -59,12 +60,15 @@ export default defineComponent({
 
 @media(min-width: 900px){
     .title > h1{
+        margin: 0;
+        padding: 0;
         font-size: 80px;
     }
 
     .title > h2{
+        margin: 0;
+        padding: 0;
         font-size: 200px;
-        margin-top: 20px;
     }
 
     .callToAction{
