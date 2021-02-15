@@ -70,9 +70,7 @@ export default defineComponent({
         }
 
         const sendRelease = async () => {
-            if (!fileUpload.value ||
-                !fileUpload.value.name ||
-                !release.value.releaseName ||
+            if (!release.value.releaseName ||
                 !release.value.releaseDescription ||
                 !release.value.releaseArtistId ||
                 !release.value.releaseType ||
@@ -83,7 +81,9 @@ export default defineComponent({
 
 
             const formData = new FormData();
-            formData.append('file', fileUpload.value, fileUpload.value.name);
+            if(fileUpload.value && fileUpload.value.name) {
+              formData.append('file', fileUpload.value, fileUpload.value.name);
+            }
             formData.append('name', release.value.releaseName);
             formData.append('description', release.value.releaseDescription);
             formData.append('artistId', release.value.releaseArtistId.toString());
