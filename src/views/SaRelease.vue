@@ -55,7 +55,7 @@ export default defineComponent({
 
 .artistName{
     font-size: xx-large;
-    color: #FFDD00;
+    color: #C9853C;
 }
 
 p{

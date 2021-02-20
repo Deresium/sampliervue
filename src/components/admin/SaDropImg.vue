@@ -83,7 +83,7 @@ export default defineComponent({
 <style scoped>
 .imgProduct {
     width: 100%;
-    border: solid 1px black;
+    border: solid 1px #0A0A0A;
     display: block;
     min-height: 20vh;
 }
@@ -93,7 +93,7 @@ input {
 }
 
 .isHoverStyle {
-    border-color: #FFDD00;
+    border-color: #C9853C;
 
 }
 

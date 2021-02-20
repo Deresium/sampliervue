@@ -72,19 +72,19 @@ img{
 
 .txt.artistName{
     font-size: xx-large;
-    color: #FFDD00;
+    color: #C9853C;
     font-weight: bold;
     margin: 0;
 }
 
 .txt{
     text-align: center;
-    color: black;
+    color: #0A0A0A;
 }
 
 .hashtag{
-    background-color: #FFDD00;
-    color: black;
+    background-color: #C9853C;
+    color: #0A0A0A;
     padding: 10px;
     border-radius: 20px;
 }

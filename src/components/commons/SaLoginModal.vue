@@ -78,7 +78,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: #F4F4F4;
     padding: 5% 5vh;
     border-radius: 10px;
 }
@@ -129,7 +129,7 @@ form > label:last-of-type{
 .line > div{
     width: 100%;
     height: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #0A0A0A;
 }
 
 .separator > .line:first-child{

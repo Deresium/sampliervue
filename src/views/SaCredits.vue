@@ -25,7 +25,7 @@ export default defineComponent({
 }
 
 .credits a{
-    color: black;
+    color: #0A0A0A;
 }
 
 </style>

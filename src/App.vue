@@ -51,6 +51,7 @@ body{
     margin-top: 0;
     margin-bottom: 0;
     max-width: 100vw;
+    background-color: #F4F4F4;
 }
 
 .app{
@@ -60,7 +61,7 @@ body{
 
 h1, h2, h3, h4, h5, h6{
     font-family: "Asap Condensed",serif;
-    color: #FFDD00;
+    color: #C9853C;
     font-weight: 300;
 }
 

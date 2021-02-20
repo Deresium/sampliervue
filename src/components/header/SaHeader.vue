@@ -1,7 +1,7 @@
 <template>
     <header>
-        <p>Samplier</p>
-        <img @click="showMenu = true" src="../../assets/icons/menu.svg" alt="icon menu"/>
+        <img class="logo" src="../../assets/logo.png" alt="logo"/>
+        <img class="icon" @click="showMenu = true" src="../../assets/icons/menu.svg" alt="icon menu"/>
         <SaMenu v-model="showMenu"/>
     </header>
 </template>
@@ -29,11 +29,11 @@ header{
     align-items: center;
 }
 
-p{
-    font-size: xx-large;
+.logo{
+    height: 100px;
 }
 
-img{
+.icon{
     height: 50px;
     cursor: pointer;
 }

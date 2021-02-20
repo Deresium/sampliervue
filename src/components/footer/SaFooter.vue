@@ -17,7 +17,7 @@ export default defineComponent({
 footer{
     height: 5vh;
     box-sizing: border-box;
-    border-top: 1px solid black;
+    border-top: 1px solid #0A0A0A;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -31,7 +31,7 @@ footer{
 div a{
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: #0A0A0A;
 }
 
 </style>

@@ -49,12 +49,12 @@ export default defineComponent({
 }
 
 p{
-    color: black;
+    color: #0A0A0A;
 }
 
 h2 span{
     font-size: small;
-    color: black;
+    color: #0A0A0A;
 }
 
 @media(min-width: 900px){

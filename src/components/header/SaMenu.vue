@@ -47,7 +47,7 @@ export default defineComponent({
     left: 0;
     width: 100vw;
     min-height: 100vh;
-    background-color: #FFDD00;
+    background-color: #C9853C;
     z-index: 10;
 }
 
@@ -80,7 +80,7 @@ export default defineComponent({
 }
 
 .routes > a{
-    color: black;
+    color: #0A0A0A;
     text-decoration: none;
     font-size: xx-large;
     margin-bottom: 30px;

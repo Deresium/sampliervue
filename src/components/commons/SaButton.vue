@@ -45,7 +45,7 @@ export default defineComponent({
             else if (props.backgroundColor)
                 return props.backgroundColor
             else
-                return '#FFFFFF'
+                return '#F4F4F4'
         }
         
         const calcPadding = (): string => {
@@ -91,8 +91,8 @@ export default defineComponent({
 
 <style scoped>
 button, a{
-    border: 1px solid black;
-    color: black;
+    border: 1px solid #0A0A0A;
+    color: #0A0A0A;
 }
 
 a{
@@ -103,12 +103,12 @@ a{
 
 button:hover, a:hover{
     cursor: pointer;
-    border-color: #FFDD00;
-    outline-color: #FFDD00;
+    border-color: #C9853C;
+    outline-color: #C9853C;
 }
 
 button:active, a:active{
-    border-color: #FFDD00;
-    color: #FFDD00;
+    border-color: #C9853C;
+    color: #C9853C;
 }
 </style>

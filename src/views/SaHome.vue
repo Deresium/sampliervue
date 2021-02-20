@@ -36,7 +36,7 @@ export default defineComponent({
 }
 
 .title h1{
-    color: black;
+    color: #0A0A0A;
     font-weight: normal;
     font-size: 60px;
     margin-bottom: 0;
