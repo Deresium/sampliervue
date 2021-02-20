@@ -1,7 +1,7 @@
 <template>
     <div class="title">
         <h1>Welcome on</h1>
-        <h2>Samplier</h2>
+        <img class="logo" src="../assets/logo.png" alt="logo"/>
     </div>
     <div class="callToAction">
         <div class="buttons">
@@ -25,8 +25,8 @@ export default defineComponent({
 <style scoped>
 .title{
     display: flex;
-    align-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -35,8 +35,11 @@ export default defineComponent({
     text-align: center;
 }
 
+.logo{
+    width: 100%;
+}
+
 .title h1{
-    color: #0A0A0A;
     font-weight: normal;
     font-size: 60px;
     margin-bottom: 0;
@@ -89,6 +92,10 @@ export default defineComponent({
 
     .large{
         font-size: xx-large;
+    }
+
+    .logo{
+        width: 80%;
     }
 }
 
