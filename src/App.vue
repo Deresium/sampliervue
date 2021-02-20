@@ -1,13 +1,15 @@
 <template>
     <div class="app exceptFooter">
-        <SaHeader/>
-        <router-view/>
+        <SaHeader v-model="showMenu"/>
+        <div v-show="!showMenu">
+            <router-view/>
+        </div>
     </div>
     <SaFooter/>
 </template>
 
 <script lang="ts">
-import {computed, defineComponent} from "vue"
+import {computed, defineComponent, ref} from "vue"
 
 import SaHeader from "@/components/header/SaHeader.vue";
 import SaFooter from "@/components/footer/SaFooter.vue";
@@ -18,6 +20,7 @@ export default defineComponent({
     components: {SaFooter, SaHeader},
     setup(){
         const isLoggedIn = computed(() => store.getters['login/isLoggedIn']);
+        const showMenu = ref(false);
 
         const getKey = computed(() => {
             const {fullPath, query: {searchTxt}} = useRoute();
@@ -31,7 +34,8 @@ export default defineComponent({
         }
 
         return{
-            getKey
+            getKey,
+            showMenu
         }
     }
 })

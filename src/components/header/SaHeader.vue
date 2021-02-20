@@ -1,22 +1,32 @@
 <template>
     <header>
         <img class="logo" src="../../assets/logo.png" alt="logo"/>
-        <img class="icon" @click="showMenu = true" src="../../assets/icons/menu.svg" alt="icon menu"/>
-        <SaMenu v-model="showMenu"/>
+        <img class="icon" @click="localShowMenu = true" src="../../assets/icons/menu.svg" alt="icon menu"/>
+        <SaMenu v-model="localShowMenu"/>
     </header>
 </template>
 
 <script lang="ts">
-import {defineComponent, ref} from "vue"
+import {computed, defineComponent, ref} from "vue"
 import SaMenu from "@/components/header/SaMenu.vue";
 
 export default defineComponent({
     components: {SaMenu},
-    setup(){
-        const showMenu = ref(false);
+    emits:['update:modelValue'],
+    props:{
+        modelValue:{
+            type: Boolean,
+            required: true,
+        }
+    },
+    setup(props, context){
+        const localShowMenu = computed({
+            get: () => {return props.modelValue},
+            set: (value) => context.emit('update:modelValue', value)
+        })
 
         return{
-            showMenu
+            localShowMenu
         }
     }
 })

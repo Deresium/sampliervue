@@ -1,6 +1,6 @@
 <template>
     <div class="title">
-        <h1>Welcome on</h1>
+        <h1>Welcome to</h1>
         <img class="logo" src="../assets/logo.png" alt="logo"/>
     </div>
     <div class="callToAction">

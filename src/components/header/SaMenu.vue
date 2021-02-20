@@ -42,13 +42,15 @@ export default defineComponent({
 
 <style scoped>
 .menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    min-height: 100vh;
+    box-sizing: border-box;
+    height: 100vh;
     background-color: #C9853C;
     z-index: 10;
+    overflow-y: scroll;
 }
 
 .clearDiv{
