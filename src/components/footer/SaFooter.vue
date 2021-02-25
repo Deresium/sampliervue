@@ -1,7 +1,7 @@
 <template>
     <footer>
         <router-link class="credits" :to="{name: 'Credits'}">Credits</router-link>
-        <div>Réalisé par <a href="https://creatiview.be" target="_blank">Creatiview.be</a></div>
+        <div>Réalisé par <a href="https://creatiview.be" rel="noopener" target="_blank">Creatiview.be</a></div>
     </footer>
 </template>
 

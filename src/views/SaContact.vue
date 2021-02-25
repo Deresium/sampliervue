@@ -31,6 +31,7 @@
 import {computed, defineComponent, ref, watch} from "vue"
 import validator from "validator";
 import SaButton from "@/components/commons/SaButton.vue";
+import axiosServer from "@/axios/axiosServer";
 
 export default defineComponent({
     components: {SaButton},
@@ -75,12 +76,20 @@ export default defineComponent({
                 errorMessage.value = '';
         })
 
-        const submitContact = () => {
+        const submitContact = async() => {
             if(!checkForm()){
                 alert('Veuillez compléter tout le formulaire');
                 return;
             }
-            alert('Formulaire envoyé avec succès');
+            const response = await axiosServer.post('/contact', {
+                name: name.value,
+                firstName: firstName.value,
+                email: email.value,
+                message: message.value
+            })
+
+            if(response.status === 200)
+                alert('Merci pour votre message. Nous vous contacterons rapidement!');
         }
 
         const checkForm = () => {
