@@ -22,9 +22,10 @@ import {queryArticle} from "@/requests/articleRequest";
 import SaButton from "@/components/commons/SaButton.vue";
 import article_1 from "@/views/articles/article_1.vue";
 import article_2 from "@/views/articles/article_2.vue";
+import article_3 from "@/views/articles/article_3.vue";
 
 export default defineComponent({
-    components: {SaButton, article_1, article_2},
+    components: {SaButton, article_1, article_2, article_3},
     setup(){
         const {params:{articleId}} = useRoute();
         const article = ref(new Article());
