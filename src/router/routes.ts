@@ -12,6 +12,9 @@ import SaCredits from "@/views/SaCredits.vue";
 import SaAdmin from "@/views/SaAdmin.vue";
 import SaForgotPassword from "@/views/SaForgotPassword.vue";
 import SaRelease from "@/views/SaRelease.vue";
+import SaDropSong from "@/views/SaDropSong.vue";
+import SaManageRelease from "@/components/admin/SaManageRelease.vue";
+import SaDropSongAdmin from "@/components/admin/SaDropSongAdmin.vue";
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -74,7 +77,32 @@ const routes: Array<RouteRecordRaw> = [
 		component: SaAdmin,
 		meta:{
 			title:'Samplier: Admin'
-		}
+		},
+        children:[
+            {
+                path: '',
+                component: SaManageRelease,
+                meta:{
+                    title:'Samplier: Admin - Sorties'
+                }
+            },
+            {
+                path: 'release',
+                name: 'ReleaseAdmin',
+                component: SaManageRelease,
+                meta:{
+                    title:'Samplier: Admin - Sorties'
+                }
+            },
+            {
+                path: 'dropSong',
+                name: 'DropSongAdmin',
+                component: SaDropSongAdmin,
+                meta:{
+                    title:'Samplier: Admin - DropSong'
+                }
+            }
+        ]
 	},
 	{
 		path: '/sorties',
@@ -92,6 +120,14 @@ const routes: Array<RouteRecordRaw> = [
 			title:'Samplier: Contact'
 		}
 	},
+    {
+        path: '/dropSong',
+        name: 'DropSong',
+        component: SaDropSong,
+        meta:{
+            title:'Samplier: Dépose ton son'
+        }
+    },
 	{
 		path:'/createAccount',
 		name:'CreateAccount',
