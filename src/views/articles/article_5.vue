@@ -3,7 +3,7 @@
         <img :src="url1" alt="img article"/>
     </div>
     <div>
-        <h2>➣ Son père</h2>
+        <h2>Son père</h2>
         <p>
             SCH depuis son enfance est baigné dans un milieu de pauvreté et un père peu présent dû au métier qu’il
             exerce. En
@@ -27,7 +27,7 @@
         </p>
     </div>
     <div>
-        <h2>➣ La pauvreté</h2>
+        <h2>La pauvreté</h2>
         <p>
             Comme dit précédemment, SCH n’a pas eu l’enfance la plus facile et a grandi dans un milieu pauvre.
             L’alcoolisme de son père a fortement influencé Julien qui dès 15 ans commence à boire comme il le dit dans
@@ -44,7 +44,7 @@
         </p>
     </div>
     <div>
-        <h2>➣ Mafia</h2>
+        <h2>Mafia</h2>
         <p>
             Avec une mentalité méditerranéenne et ayant grandi dans un milieu difficile, il s’est rapproché du monde
             mafieux, le manque de moyen fait naître le crime, c’est comme cela que SCH va se construire.
