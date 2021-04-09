@@ -26,9 +26,10 @@ import article_3 from "@/views/articles/article_3.vue";
 import article_4 from "@/views/articles/article_4.vue";
 import article_5 from "@/views/articles/article_5.vue";
 import article_6 from "@/views/articles/article_6.vue";
+import article_7 from "@/views/articles/article_7.vue";
 
 export default defineComponent({
-    components: {SaButton, article_1, article_2, article_3, article_4, article_5, article_6},
+    components: {SaButton, article_1, article_2, article_3, article_4, article_5, article_7},
     setup(){
         const {params:{articleId}} = useRoute();
         const article = ref(new Article());
