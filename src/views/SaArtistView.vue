@@ -19,9 +19,11 @@ import {useRoute} from "vue-router";
 import {queryArtist} from "@/requests/artistRequest";
 import Artist from "@/models/Artist";
 import SaButton from "@/components/commons/SaButton.vue";
+import artist_1 from "@/views/artists/artist_1.vue";
+import artist_2 from "@/views/artists/artist_2.vue";
 
 export default defineComponent({
-    components: {SaButton},
+    components: {SaButton, artist_1, artist_2},
     setup(){
         const {params:{artistId}} = useRoute();
         let id: number | undefined = undefined;

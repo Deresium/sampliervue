@@ -8,10 +8,10 @@
                 <div class="routes">
                     <router-link :to="{name: 'Home'}"><span @click="closeMenu">Home</span></router-link>
                     <router-link :to="{name: 'Actuality'}"><span @click="closeMenu">Actualité</span></router-link>
-                    <router-link :to="{name: 'Interview'}"><span @click="closeMenu">Interviews</span></router-link>
-                    <router-link :to="{name: 'Videopodcast'}"><span @click="closeMenu">Vidéos & Podcasts</span></router-link>
+                    <!--<router-link :to="{name: 'Interview'}"><span @click="closeMenu">Interviews</span></router-link>-->
+                    <!--<router-link :to="{name: 'Videopodcast'}"><span @click="closeMenu">Vidéos & Podcasts</span></router-link>-->
                     <router-link :to="{name: 'Artists'}"><span @click="closeMenu">Artistes</span></router-link>
-                    <router-link :to="{name: 'Release'}"><span @click="closeMenu">Sorties</span></router-link>
+                    <!--<router-link :to="{name: 'Release'}"><span @click="closeMenu">Sorties</span></router-link>-->
                     <router-link :to="{name: 'DropSong'}"><span @click="closeMenu">Déposer un son</span></router-link>
                     <router-link :to="{name: 'Contact'}"><span @click="closeMenu">Contact</span></router-link>
                 </div>
