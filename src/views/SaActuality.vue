@@ -1,6 +1,7 @@
 <template>
     <div class="withMargin">
         <h1>Notre actualité</h1>
+        <SaGoogleAdSense/>
         <SaArticle v-for="article in actuality" :key="article.id" :article="article"/>
     </div>
 </template>
@@ -10,9 +11,10 @@ import {defineComponent, ref} from "vue"
 import {queryArticles} from "@/requests/articleRequest";
 import Article from "@/models/Article";
 import SaArticle from "@/components/article/SaArticle.vue";
+import SaGoogleAdSense from "@/components/commons/SaGoogleAdSense.vue";
 
 export default defineComponent({
-    components: {SaArticle},
+    components: {SaGoogleAdSense, SaArticle},
     setup(){
         const actuality = ref(new Array<Article>());
         queryArticles('ACTUALITY').then(response => {

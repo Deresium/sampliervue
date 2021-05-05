@@ -1,6 +1,7 @@
 <template>
     <div class="withMargin">
         <h1>{{article.articleTitle}}</h1>
+        <SaGoogleAdSense/>
         <p class="bold">{{article.articleSubtitle}}</p>
 
         <div class="component">
@@ -28,9 +29,12 @@ import article_5 from "@/views/articles/article_5.vue";
 import article_6 from "@/views/articles/article_6.vue";
 import article_7 from "@/views/articles/article_7.vue";
 import article_8 from "@/views/articles/article_8.vue";
+import SaGoogleAdSense from "@/components/commons/SaGoogleAdSense.vue";
 
 export default defineComponent({
-    components: {SaButton, article_1, article_2, article_3, article_4, article_5, article_6, article_7, article_8},
+    components: {
+        SaGoogleAdSense,
+        SaButton, article_1, article_2, article_3, article_4, article_5, article_6, article_7, article_8},
     setup(){
         const {params:{articleId}} = useRoute();
         const article = ref(new Article());
