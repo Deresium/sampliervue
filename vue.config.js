@@ -4,6 +4,6 @@ module.exports = {
         ? '/samplier/'
         : '/',
     devServer: {
-        host: 'samplier.be'
+        host: 'www.samplier.be'
     }
 }
