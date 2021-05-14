@@ -30,12 +30,13 @@ import article_6 from "@/views/articles/article_6.vue";
 import article_7 from "@/views/articles/article_7.vue";
 import article_8 from "@/views/articles/article_8.vue";
 import article_9 from "@/views/articles/article_9.vue";
+import article_10 from "@/views/articles/article_10.vue";
 import SaGoogleAdSense from "@/components/commons/SaGoogleAdSense.vue";
 
 export default defineComponent({
     components: {
         SaGoogleAdSense,
-        SaButton, article_1, article_2, article_3, article_4, article_5, article_6, article_7, article_8, article_9},
+        SaButton, article_1, article_2, article_3, article_4, article_5, article_6, article_7, article_8, article_9, article_10},
     setup(){
         const {params:{articleId}} = useRoute();
         const article = ref(new Article());
