@@ -21,9 +21,16 @@ import Artist from "@/models/Artist";
 import SaButton from "@/components/commons/SaButton.vue";
 import artist_1 from "@/views/artists/artist_1.vue";
 import artist_2 from "@/views/artists/artist_2.vue";
+import artist_3 from "@/views/artists/artist_3.vue";
+import artist_4 from "@/views/artists/artist_4.vue";
+import artist_5 from "@/views/artists/artist_5.vue";
+import artist_6 from "@/views/artists/artist_6.vue";
+import artist_7 from "@/views/artists/artist_7.vue";
+import artist_8 from "@/views/artists/artist_8.vue";
+import artist_9 from "@/views/artists/artist_9.vue";
 
 export default defineComponent({
-    components: {SaButton, artist_1, artist_2},
+    components: {SaButton, artist_1, artist_2, artist_3, artist_4, artist_5, artist_6, artist_7, artist_8, artist_9},
     setup(){
         const {params:{artistId}} = useRoute();
         let id: number | undefined = undefined;
